@@ -1,32 +1,33 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { ArrowLeft, FileText, Users, AlertTriangle, Scale } from "lucide-react";
+import { Link } from "react-router-dom";
 
-interface TermsPageProps {
-  onGoHome: () => void;
-}
 
-export function TermsPage({ onGoHome }: TermsPageProps) {
+
+export function TermsPage() {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="mb-12">
-          <Button
-            variant="ghost"
-            onClick={onGoHome}
-            className="mb-6 hover:bg-[#25F4EE]/10"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Home
-          </Button>
-          
+          <Link to="/">
+            <Button
+              variant="ghost"
+              className="mb-6 hover:bg-[#25F4EE]/10"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
+
+
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#25F4EE]/10 to-[#FE2C55]/10 border border-[#25F4EE]/20 mb-6">
               <FileText className="w-4 h-4 text-[#25F4EE]" />
               <span className="text-sm">Legal Agreement</span>
             </div>
-            
+
             <h1 className="text-5xl font-bold mb-6">
               Terms of <span className="gradient-text">Service</span>
             </h1>
@@ -47,13 +48,13 @@ export function TermsPage({ onGoHome }: TermsPageProps) {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                By accessing and using VideoManager, you accept and agree to be bound by the terms 
-                and provisions of this agreement. These Terms of Service govern your use of our platform 
+                By accessing and using VideoManager, you accept and agree to be bound by the terms
+                and provisions of this agreement. These Terms of Service govern your use of our platform
                 and services.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                If you do not agree to abide by the above, please do not use this service. We reserve 
-                the right to modify these terms at any time, and such modifications will be effective 
+                If you do not agree to abide by the above, please do not use this service. We reserve
+                the right to modify these terms at any time, and such modifications will be effective
                 immediately upon posting.
               </p>
             </CardContent>
@@ -89,7 +90,7 @@ export function TermsPage({ onGoHome }: TermsPageProps) {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                You retain all rights to the content you upload to our platform. However, by uploading 
+                You retain all rights to the content you upload to our platform. However, by uploading
                 content, you grant us a limited license to:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
@@ -99,7 +100,7 @@ export function TermsPage({ onGoHome }: TermsPageProps) {
                 <li>Analyze content for security and compliance purposes</li>
               </ul>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                You are solely responsible for ensuring you have the rights to upload and publish 
+                You are solely responsible for ensuring you have the rights to upload and publish
                 any content through our platform.
               </p>
             </CardContent>
@@ -114,7 +115,7 @@ export function TermsPage({ onGoHome }: TermsPageProps) {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                Our service is provided "as is" without any warranties, express or implied. 
+                Our service is provided "as is" without any warranties, express or implied.
                 We shall not be liable for:
               </p>
               <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
@@ -136,12 +137,12 @@ export function TermsPage({ onGoHome }: TermsPageProps) {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                You may terminate your account at any time through your account settings. We may 
+                You may terminate your account at any time through your account settings. We may
                 terminate or suspend your account if you violate these terms.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Upon termination, your right to use the service will cease immediately. We will 
-                make reasonable efforts to provide you with access to your data for a limited time 
+                Upon termination, your right to use the service will cease immediately. We will
+                make reasonable efforts to provide you with access to your data for a limited time
                 following termination.
               </p>
             </CardContent>
@@ -151,7 +152,7 @@ export function TermsPage({ onGoHome }: TermsPageProps) {
             <CardContent className="p-8 text-center">
               <h3 className="text-xl font-semibold mb-4">Questions About These Terms?</h3>
               <p className="text-muted-foreground mb-6">
-                If you have any questions about these Terms of Service, please contact our legal team 
+                If you have any questions about these Terms of Service, please contact our legal team
                 for clarification.
               </p>
               <Button className="gradient-aqua-pink text-black glow-button">

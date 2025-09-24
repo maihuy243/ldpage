@@ -1,25 +1,25 @@
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { ArrowLeft, Shield, Eye, Lock, Database } from "lucide-react";
+import { Link } from "react-router-dom";
 
-interface PrivacyPageProps {
-  onGoHome: () => void;
-}
 
-export function PrivacyPage({ onGoHome }: PrivacyPageProps) {
+export function PrivacyPage() {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
         <div className="mb-12">
+          <Link to="/">
           <Button
             variant="ghost"
-            onClick={onGoHome}
             className="mb-6 hover:bg-[#25F4EE]/10"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Button>
+          </Link>
+
           
           <div className="text-center max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#25F4EE]/10 to-[#FE2C55]/10 border border-[#25F4EE]/20 mb-6">
